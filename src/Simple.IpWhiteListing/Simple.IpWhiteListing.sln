@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.IpWhiteListing", "Simple.IpWhiteListing\Simple.IpWhiteListing.csproj", "{8112F8A5-DAE1-4E98-B35E-1644B47E6838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample1", "..\..\Sample\Sample1\Sample1.csproj", "{68790E5D-4926-49BA-B222-2F40BDE0DD3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8112F8A5-DAE1-4E98-B35E-1644B47E6838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8112F8A5-DAE1-4E98-B35E-1644B47E6838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8112F8A5-DAE1-4E98-B35E-1644B47E6838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8112F8A5-DAE1-4E98-B35E-1644B47E6838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68790E5D-4926-49BA-B222-2F40BDE0DD3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68790E5D-4926-49BA-B222-2F40BDE0DD3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68790E5D-4926-49BA-B222-2F40BDE0DD3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68790E5D-4926-49BA-B222-2F40BDE0DD3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B858D3A-BC56-4AC9-8AF9-989F63980B7A}
+	EndGlobalSection
+EndGlobal
