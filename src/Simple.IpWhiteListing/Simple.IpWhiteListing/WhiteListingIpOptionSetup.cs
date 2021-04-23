@@ -14,9 +14,10 @@ namespace Simple.IpWhiteListing
         }
         public void Configure(WhiteListingIpOption options)
         {
-            var ipList = configuration.GetSection("Allowed").Value?.Split(",")
+            var ipList = configuration.GetSection("AllowedIp").Value?.Split(",")
                                                                         .Select(x => new Ip(x));
-            options.IpList.AddRange(ipList);
+            if (ipList != null)
+                options.IpList?.AddRange(ipList);
         }
     }
 }

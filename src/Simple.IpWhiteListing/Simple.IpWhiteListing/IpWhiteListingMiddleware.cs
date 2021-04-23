@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using System;
 using System.Threading.Tasks;
 
 namespace Simple.IpWhiteListing
@@ -14,13 +15,20 @@ namespace Simple.IpWhiteListing
             _next = next;
             this._option = option;
         }
+
         public async Task Invoke(HttpContext context)
         {
-            if (!_option.Value.AllowedIp(context.Connection.RemoteIpAddress))
-                return;//Return no access error to client
+            string? ip = Convert.ToString(context.Connection.RemoteIpAddress);
+
+            if (!_option.Value.AllowedIp(ip))
+            {
+                context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                await context.Response.WriteAsync("Not allowed");
+
+                return;
+            }
 
             await _next(context);
         }
-
     }
 }

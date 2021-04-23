@@ -5,16 +5,16 @@ namespace Simple.IpWhiteListing
 {
     public class WhiteListingIpOption
     {
-        public List<Ip> IpList { get; set; }
+        public List<Ip>? IpList { get; set; }
 
-        internal bool AllowedIp(IPAddress remoteIpAddress)
+        internal bool AllowedIp(string? remoteIpAddress)
         {
-            if (remoteIpAddress == null)
+            if (remoteIpAddress == null || IpList == null)
                 return false;
-            if (!IpList.Exists(x => x == remoteIpAddress.ToString()))
-                return false;
+            if (IpList.Exists(x => x == remoteIpAddress.ToString()))
+                return true;
 
-            return true;
+            return false;
         }
     }
 
@@ -24,9 +24,11 @@ namespace Simple.IpWhiteListing
         {
             value = ip;
         }
-        private string value;
+
+        private readonly string value;
 
         public static implicit operator string(Ip ip) => ip.value;
-        public static implicit operator Ip(string ip) => new Ip(ip);
+
+        public static implicit operator Ip(string ip) => new(ip);
     }
 }
