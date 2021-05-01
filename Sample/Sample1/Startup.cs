@@ -28,7 +28,7 @@ namespace Sample1
             });
             services.AddIpWhiteListing(option =>
             {
-                option.IpList.Add("1.1.1.1");
+                option.IpList.Add("1.2.3.4");
             });
         }
 

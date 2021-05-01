@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Net;
 
 namespace Simple.IpWhiteListing
 {
     public class WhiteListingIpOption
     {
-        public List<Ip>? IpList { get; set; }
+        public List<Ip>? IpList { get; set; }//= new List<Ip>();
 
         internal bool AllowedIp(string? remoteIpAddress)
         {

@@ -23,7 +23,7 @@ namespace Simple.IpWhiteListing
             if (!_option.Value.AllowedIp(ip))
             {
                 context.Response.StatusCode = StatusCodes.Status403Forbidden;
-                await context.Response.WriteAsync("Not allowed");
+                await context.Response.WriteAsync("Server denied the request");
 
                 return;
             }
